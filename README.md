@@ -8,6 +8,7 @@ Implemented functions:
 <ul>
 	<li>Where</li>
 	<li>First</li>
+	<li>Any</li>
 </ul>
 
 ##Where
@@ -27,4 +28,18 @@ var firstItem = array.first(function(item){
 	return item.id === 13;
 });
 //firstItem = {name:"Anders", id:13}
+```
+
+
+##Any
+```javascript
+var array = [1,2,3,4,5,6,7,8,9,10]
+
+var hasAny = array.any();
+//hasAny = true
+
+var hasAnyOver13 = array.any(function(item){
+    return item > 13;
+});
+//hasAnyOver13 = false
 ```
