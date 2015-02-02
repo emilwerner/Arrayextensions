@@ -35,4 +35,10 @@
         });
         console.log("SELECT",selectedItems);
     })();//end firstExample
+
+    (function skipExample(){
+        var array = [1,2,3,4,5,6,7,8,9,10];
+        var subset = array.skip(7);
+        console.log("SKIP",subset);
+    })();//end firstExample
 })();

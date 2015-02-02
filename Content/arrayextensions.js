@@ -49,4 +49,12 @@
 		};
 		return newArray;
 	}; //end select
+
+	Array.prototype.skip = function (count) {
+		var newArray = [];
+		for (var i = count; i < this.length; i++) {
+			newArray.push(this[i]);
+		};
+		return newArray;
+	}; //end skip
 })();
