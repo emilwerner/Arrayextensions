@@ -11,12 +11,18 @@
 
 	Array.prototype.first = function (func) {
 		var obj;
-		for (var i = 0; i < this.length; i++) {
-			if(func(this[i])){
-				obj = this[i];
-				break;
-			}
-		};
+		if(func){
+			for (var i = 0; i < this.length; i++) {
+				if(func(this[i])){
+					obj = this[i];
+					break;
+				}
+			};
+		}
+		else{
+			obj = this[0];
+		}
+
 		return obj;
 	}; //end first
 
@@ -35,4 +41,12 @@
 		}		
 		return hasAny;
 	}; //end any
+
+	Array.prototype.select = function (func) {
+		var newArray = [];
+		for (var i = 0; i < this.length; i++) {
+			newArray.push(func(this[i]));
+		};
+		return newArray;
+	}; //end select
 })();

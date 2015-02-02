@@ -27,4 +27,12 @@
         console.log("ANY",hasAny);
     })();//end firstExample
 
+
+    (function selectExample(){
+        var array = [{name:"Emil", id:1},{name:"Anders", id:13},{name:"Kalle", id:43}];
+        var selectedItems = array.select(function(item){
+            return item.name;
+        });
+        console.log("SELECT",selectedItems);
+    })();//end firstExample
 })();
