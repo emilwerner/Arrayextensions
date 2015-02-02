@@ -11,6 +11,7 @@ Implemented functions:
 	<li>Select</li>
 	<li>Skip</li>
 	<li>Take</li>
+	<li>Reverse</li>
 </ul>
 
 TODO:
@@ -83,3 +84,9 @@ var subset = array.take(4);
 //subset = [1,2,3,4]
 ```
 
+##Reverse
+```javascript
+var array = [1,2,3,4,5,6,7,8,9,10];
+var reversedArray = array.reverse();
+//reversedArray = [10,9,8,7,6,5,4,3,2,1]
+```

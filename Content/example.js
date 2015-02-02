@@ -42,9 +42,16 @@
         console.log("SKIP",subset);
     })();//end skipExample
 
-     (function takeExample(){
+    (function takeExample(){
         var array = [1,2,3,4,5,6,7,8,9,10];
         var subset = array.take(4);
         console.log("TAKE",subset);
     })();//end takeExample
+
+    (function reverseExample(){
+        var array = [1,2,3,4,5,6,7,8,9,10];
+        var subset = array.reverse();
+        console.log("REVERSE",subset);
+    })();//end reverseExample
+
 })();

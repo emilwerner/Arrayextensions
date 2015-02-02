@@ -68,4 +68,12 @@
 		};
 		return newArray;
 	}; //end take
+
+	Array.prototype.reverse = function () {
+		var newArray = [];
+		for (var i = this.length - 1; i >= 0; i--) {
+			newArray.push(this[i]);
+		};
+		return newArray;
+	}; //end take
 })();
