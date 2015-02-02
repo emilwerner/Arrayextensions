@@ -25,7 +25,7 @@
         });
 
         console.log("ANY",hasAny);
-    })();//end firstExample
+    })();//end anyExample
 
 
     (function selectExample(){
@@ -34,11 +34,17 @@
             return item.name;
         });
         console.log("SELECT",selectedItems);
-    })();//end firstExample
+    })();//end selectExample
 
     (function skipExample(){
         var array = [1,2,3,4,5,6,7,8,9,10];
         var subset = array.skip(7);
         console.log("SKIP",subset);
-    })();//end firstExample
+    })();//end skipExample
+
+     (function takeExample(){
+        var array = [1,2,3,4,5,6,7,8,9,10];
+        var subset = array.take(4);
+        console.log("TAKE",subset);
+    })();//end takeExample
 })();

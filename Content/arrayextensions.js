@@ -57,4 +57,15 @@
 		};
 		return newArray;
 	}; //end skip
+
+	Array.prototype.take = function (count) {
+		var newArray = [];
+		if(count > this.length){
+			count = this.length;
+		}
+		for (var i = 0; i < count; i++) {
+			newArray.push(this[i]);
+		};
+		return newArray;
+	}; //end take
 })();

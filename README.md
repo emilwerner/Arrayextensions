@@ -10,6 +10,7 @@ Implemented functions:
 	<li>Any</li>
 	<li>Select</li>
 	<li>Skip</li>
+	<li>Take</li>
 </ul>
 
 TODO:
@@ -20,8 +21,7 @@ TODO:
 	<li>OrderbyDescending</li>
 	<li>Max</li>
 	<li>Min</li>
-	<li>Take</li>
-	
+	<li>Remove</li>	
 </ul>
 
 
@@ -76,5 +76,10 @@ var subset = array.skip(7);
 //subset = [8,9,10]
 ```
 
+##Take
+```javascript
+var array = [1,2,3,4,5,6,7,8,9,10];
+var subset = array.take(4);
+//subset = [1,2,3,4]
+```
 
-       
