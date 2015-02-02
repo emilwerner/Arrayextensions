@@ -4,8 +4,17 @@
         var filteredArray = array.where(function(item){
             return item < 5;
         });
-        console.log(array, filteredArray);
-})();//end whereExample
+        console.log("WHERE",array, filteredArray);
+    })();//end whereExample
 
+    (function firstExample(){
+        var array = [{name:"Emil", id:1},{name:"Anders", id:13},{name:"Kalle", id:43}]
+
+        var firstItem = array.first(function(item){
+            return item.id === 13;
+        });
+
+        console.log("FIRST",firstItem);
+    })();//end firstExample
 
 })();
