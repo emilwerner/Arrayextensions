@@ -4,6 +4,10 @@ describe("where is implemented correctly", function() {
 		expect([].where).toBeDefined();
 	});
 
+	it("Where without argument throws error", function() {
+		expect([].where).toThrow(new Error("Argument for Where is required"));
+	});
+
 	it("Where on empty array does not throw error", function() {
 		var emptyArray = [].where(function(item){return true;});
 		expect(emptyArray.length).toEqual(0);

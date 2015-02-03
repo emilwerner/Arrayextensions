@@ -4,6 +4,8 @@ describe("Any is implemented correctly", function() {
 		expect([].any).toBeDefined();
 	});
 
+
+
 	it("Any on empty array returns false", function() {
 		expect([].any()).toEqual(false);
 	});

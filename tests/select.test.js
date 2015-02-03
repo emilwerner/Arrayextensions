@@ -4,6 +4,9 @@ describe("Select is implemented correctly", function() {
 		expect([].select).toBeDefined();
 	});
 
+	it("Select without argument throws error", function() {
+		expect([].select).toThrow(new Error("Argument for Select is required"));
+	});
 	it("Select on empty array returns empty array", function() {
 		expect([].select(function(item){
 			return item === "whatever"

@@ -1,5 +1,7 @@
 (function(){
 	Array.prototype.where = function (func) {
+		if(!func) throw new Error("Argument for Where is required");
+
 		var newArray = [];
 		for (var i = 0; i < this.length; i++) {
 			if(func(this[i])){
@@ -43,6 +45,8 @@
 	}; //end any
 
 	Array.prototype.select = function (func) {
+		if(!func) throw new Error("Argument for Select is required");
+
 		var newArray = [];
 		for (var i = 0; i < this.length; i++) {
 			newArray.push(func(this[i]));
@@ -51,6 +55,8 @@
 	}; //end select
 
 	Array.prototype.skip = function (count) {
+		if(!count) throw new Error("Argument for Skip is required");
+
 		var newArray = [];
 		for (var i = count; i < this.length; i++) {
 			newArray.push(this[i]);
@@ -59,6 +65,8 @@
 	}; //end skip
 
 	Array.prototype.take = function (count) {
+		if(!count) throw new Error("Argument for Take is required");
+
 		var newArray = [];
 		if(count > this.length){
 			count = this.length;

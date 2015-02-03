@@ -4,6 +4,11 @@ describe("Skip is implemented correctly", function() {
 		expect([].skip).toBeDefined();
 	});
 
+
+	it("Skip without argument throws error", function() {
+		expect([].skip).toThrow(new Error("Argument for Skip is required"));
+	});
+
 	it("skip on empty array returns empty array", function() {
 		expect([].skip(10).length).toEqual(0);
 	});
