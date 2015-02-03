@@ -83,5 +83,16 @@
 			newArray.push(this[i]);
 		};
 		return newArray;
-	}; //end take
+	}; //end reverse
+
+	Array.prototype.remove = function (func) {
+		if(!func) throw new Error("Argument for Remove is required");
+		var newArray = [];
+		for (var i = 0; i < this.length; i++) {
+			if(!func(this[i])){
+				newArray.push(this[i]);
+			}
+		};
+		return newArray;
+	}; //end remove
 })();
