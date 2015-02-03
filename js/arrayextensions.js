@@ -6,7 +6,6 @@
 				newArray.push(this[i]);
 			}
 		};
-		
 		return newArray;
 	}; //end where
 
