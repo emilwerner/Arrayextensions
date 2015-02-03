@@ -95,4 +95,20 @@
 		};
 		return newArray;
 	}; //end remove
+
+	Array.prototype.sum = function (func) {
+		var sum = 0;
+		for (var i = this.length - 1; i >= 0; i--) {
+			if(func){
+				sum += func(this[i]);
+			}
+			else{
+				sum += this[i];
+			}		
+		};
+		if(typeof sum !== 'number'){
+			throw new Error("SUM: Values must be numbers");
+		}
+		return sum;
+	}; //end sum
 })();

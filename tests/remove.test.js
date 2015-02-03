@@ -14,11 +14,6 @@ describe("Remove is implemented correctly", function() {
 		})).toEqual([]);
 	});
 
-	it("Remove on number array", function() {
-		expect([1,3,6,8,11].remove(function(num){
-			return num > 6;
-		})).toEqual([1,3,6,]);
-	});
 
 	it("Remove all gives empty array", function() {
 		expect([1,3,6,8,11].remove(function(num){
@@ -31,4 +26,18 @@ describe("Remove is implemented correctly", function() {
 			return false;
 		})).toEqual([1,3,6,8,11]);
 	});
+
+
+	it("Remove single", function() {
+		expect([1,2,3,4,5].remove(function(num){
+			return num === 5;
+		})).toEqual([1,2,3,4]);
+	});
+
+	it("Remove multiple", function() {
+		expect([1,3,6,8,11].remove(function(num){
+			return num > 6;
+		})).toEqual([1,3,6,]);
+	});
+
 });

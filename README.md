@@ -14,17 +14,16 @@ Implemented functions:
 	<li>Take</li>
 	<li>Reverse</li>
 	<li>Remove</li>	
+	<li>Sum</li>
 </ul>
 
 TODO:
 <ul>
-	<li>Sum</li>
 	<li>Average</li>
 	<li>Orderby</li>
 	<li>OrderbyDescending</li>
 	<li>Max</li>
 	<li>Min</li>
-
 </ul>
 
 
@@ -101,3 +100,17 @@ var subset = array.remove(function(num){
 });
 //subset = [1,2,3,4]
 ```
+
+##Sum
+```javascript
+var sum = [1,2,3,4].sum();
+//sum = 10
+
+var personArray = [{name:"Emil", age: 24},{name:"Anders", age: 19}];
+var sum = personArray.sum(function(person){
+	return person.age;
+});
+//var sum = 43
+
+```
+
