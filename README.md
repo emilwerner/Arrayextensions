@@ -139,7 +139,7 @@ return person.age;
 var min = [1,7,23.5,2,22].min();
 //min = 1
 
-var max = [{age:20},{age:10},{age:30},{age:35}].max(function(person){
+var max = [{age:20},{age:10},{age:30},{age:35}].min(function(person){
 return person.age;
 })
 //min = 10
