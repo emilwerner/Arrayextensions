@@ -108,7 +108,7 @@ var personArray = [{name:"Emil", age: 24},{name:"Anders", age: 19}];
 var sum = personArray.sum(function(person){
 	return person.age;
 });
-//var sum = 43
+// sum = 43
 
 ```
 
@@ -122,6 +122,30 @@ var personArray = [{name:"Emil", age: 24},{name:"Anders", age: 20}];
 var average = personArray.average(function(person){
 	return person.age;
 });
-//var average = 22
+// average = 22
+
+```
+
+##Max
+```javascript
+var max = [1,7,23.5,2,22].max();
+//max = 23.5
+
+var max = [{age:20},{age:10},{age:30},{age:35}].max(function(person){
+	return person.age;
+})
+//max = 32
+
+```
+
+##Min
+```javascript
+var min = [1,7,23.5,2,22].min();
+//min = 1
+
+var max = [{age:20},{age:10},{age:30},{age:35}].max(function(person){
+	return person.age;
+})
+//min = 10
 
 ```

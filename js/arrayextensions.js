@@ -135,4 +135,56 @@
 
 		return average;
 	}; //end average
+
+	Array.prototype.max = function (func) {
+		var max;
+		if(func){
+			max = func(this[0]);
+		}
+		else{
+			max = 0;
+		}
+
+		for (var i = 1; i < this.length; i++) {
+			if(func){
+				if(func(this[i]) > max){
+					max = func(this[i]);
+				}
+			}else{
+				if(this[i] > max){
+					max = this[i];
+				}
+			}
+		};		
+		if(typeof max !== "number") throw new Error("Max only works with numbers");
+		return max;
+	}; //end max
+
+	Array.prototype.min = function (func) {
+		var min,
+		start = 1;
+
+		if(func){
+			min = func(this[0]);
+		}
+		else{
+			if(this.length > 0){
+				start = 0;
+			}
+			min = Number.MAX_VALUE;
+		}
+		for (var i = start; i < this.length; i++) {
+			if(func){
+				if(func(this[i]) < min){
+					min = func(this[i]);
+				}
+			}else{
+				if(this[i] < min){
+					min = this[i];
+				}
+			}
+		};		
+		if(typeof min !== "number") throw new Error("Min only works with numbers");
+		return min;
+	}; //end min
 })();
