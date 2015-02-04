@@ -15,13 +15,11 @@ Implemented functions:
 	<li>Reverse</li>
 	<li>Remove</li>	
 	<li>Sum</li>
+	<li>Average</li>
 </ul>
 
 TODO:
 <ul>
-	<li>Average</li>
-	<li>Orderby</li>
-	<li>OrderbyDescending</li>
 	<li>Max</li>
 	<li>Min</li>
 </ul>
@@ -31,7 +29,7 @@ TODO:
 ```javascript
 var array = [1,2,3,4,5,6,7,8,9,10]
 var filteredArray = array.where(function(item){
-return item < 5;
+	return item < 5;
 });
 //filteredArray = [1,2,3,4]
 ```
@@ -41,7 +39,7 @@ return item < 5;
 var array = [{name:"Emil", id:1},{name:"Anders", id:13},{name:"Kalle", id:43}]
 
 var firstItem = array.first(function(item){
-return item.id === 13;
+	return item.id === 13;
 });
 //firstItem = {name:"Anders", id:13}
 ```
@@ -55,7 +53,7 @@ var hasAny = array.any();
 //hasAny = true
 
 var hasAnyOver13 = array.any(function(item){
-return item > 13;
+	return item > 13;
 });
 //hasAnyOver13 = false
 ```
@@ -65,7 +63,7 @@ return item > 13;
 var array = [{name:"Emil", id:1},{name:"Anders", id:13},{name:"Kalle", id:43}]
 
 var selectedItems = array.select(function(item){
-return item.name;
+	return item.name;
 });
 //selectedItems = ["Emil", "Anders", "Kalle"]
 ```
@@ -114,3 +112,16 @@ var sum = personArray.sum(function(person){
 
 ```
 
+
+##Average
+```javascript
+var average = [1,2,3,4].average();
+//average = 2.5
+
+var personArray = [{name:"Emil", age: 24},{name:"Anders", age: 20}];
+var average = personArray.average(function(person){
+	return person.age;
+});
+//var average = 22
+
+```

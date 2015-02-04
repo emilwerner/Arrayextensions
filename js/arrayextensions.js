@@ -111,4 +111,28 @@
 		}
 		return sum;
 	}; //end sum
+
+	Array.prototype.average = function (func) {
+		var average = 0;
+		var theArray;
+		if(func){
+			theArray = this.select(func);
+		}
+		else{
+			theArray = this;
+		}
+		try{
+			var sum = theArray.sum();
+		}
+		catch(err){
+			throw new Error("Average only works with numbers");
+		}
+
+		if(this.length > 0){
+			var nrOfItems = this.length;
+			average = sum/nrOfItems;
+		}
+
+		return average;
+	}; //end average
 })();
